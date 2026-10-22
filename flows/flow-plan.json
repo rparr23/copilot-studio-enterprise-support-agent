@@ -1,0 +1,43 @@
+{
+  "artifact_type": "implementation_specification_not_importable_export",
+  "project": "Enterprise AI Employee Support Agent",
+  "actions": [
+    {
+      "order": 1,
+      "action": "When an agent calls the flow",
+      "configuration": "Inputs: RequestKey, category, description, confirmed. Resolve requester identity from a trusted authenticated context."
+    },
+    {
+      "order": 2,
+      "action": "Validate request",
+      "configuration": "Reject blank fields, unsupported category, description over 2000 characters, missing caller, or unconfirmed submissions."
+    },
+    {
+      "order": 3,
+      "action": "Reserve key",
+      "configuration": "Use a unique RequestKey column. Serialize demo trigger or use an atomic Dataverse alternate-key reservation for scale."
+    },
+    {
+      "order": 4,
+      "action": "Create ticket",
+      "configuration": "Create SharePoint item with caller identity and New status. On unique-key conflict load existing and compare immutable payload."
+    },
+    {
+      "order": 5,
+      "action": "Respond to agent",
+      "configuration": "Return ticket ID and status. Never echo raw connector exceptions."
+    },
+    {
+      "order": 6,
+      "action": "Failure scope",
+      "configuration": "Run after failed or timed-out actions. Log correlation ID, error code and stage; return retriable failure."
+    }
+  ],
+  "connection_references": "Create and bind in the target tenant",
+  "retry_policy": {
+    "transient_only": true,
+    "max_attempts": 3,
+    "respect_retry_after": true,
+    "ambiguous_remote_write": "reconcile_before_retry"
+  }
+}

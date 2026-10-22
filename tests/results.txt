@@ -1,0 +1,14 @@
+Executed 2026-10-22 on Python 3.12; synthetic data; no Microsoft tenant calls.
+test_authorized_grounded_answer (test_app.SupportTests.test_authorized_grounded_answer) ... ok
+test_invalid_inputs (test_app.SupportTests.test_invalid_inputs) ... ok
+test_restricted_document_hidden (test_app.SupportTests.test_restricted_document_hidden) ... ok
+test_storage_failure_surfaces (test_app.SupportTests.test_storage_failure_surfaces) ... ok
+test_ticket_confirmation (test_app.SupportTests.test_ticket_confirmation) ... ok
+test_ticket_retry_and_payload_conflict (test_app.SupportTests.test_ticket_retry_and_payload_conflict) ... ok
+test_unauthenticated_empty_groups (test_app.SupportTests.test_unauthenticated_empty_groups) ... ok
+test_unknown_policy_not_invented (test_app.SupportTests.test_unknown_policy_not_invented) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.002s
+
+OK

@@ -1,0 +1,46 @@
+Executed local reference walkthrough; no Microsoft delivery.
+
+$ python3 src/app.py ask "vacation leave policy"
+{
+  "status": "grounded",
+  "answer": "Synthetic policy HR-001: Submit vacation requests in the employee portal at least 5 business days in advance. Manager approval is required.",
+  "sources": [
+    "HR-001"
+  ]
+}
+
+
+
+$ python3 src/app.py ask "executive salary compensation"
+{
+  "status": "escalate",
+  "answer": "No authorized source found. Please create a support request.",
+  "sources": []
+}
+
+
+
+$ python3 src/app.py ticket --key demo-1 --employee synthetic-user --category IT --description "VPN connection fails" --confirm
+{
+  "ticket_id": "SUP-000001",
+  "duplicate": false
+}
+
+
+
+$ python3 src/app.py ticket --key demo-1 --employee synthetic-user --category IT --description "VPN connection fails" --confirm
+{
+  "ticket_id": "SUP-000001",
+  "duplicate": true
+}
+
+
+
+$ python3 src/app.py tickets
+[
+  {
+    "ticket_id": "SUP-000001",
+    "category": "IT",
+    "created": "2026-10-22 18:08:40"
+  }
+]

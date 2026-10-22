@@ -1,0 +1,56 @@
+[
+  {
+    "id": "HR-001",
+    "groups": [
+      "employees"
+    ],
+    "keywords": [
+      "pto",
+      "leave",
+      "vacation",
+      "request",
+      "policy"
+    ],
+    "text": "Synthetic policy HR-001: Submit vacation requests in the employee portal at least 5 business days in advance. Manager approval is required."
+  },
+  {
+    "id": "IT-001",
+    "groups": [
+      "employees"
+    ],
+    "keywords": [
+      "vpn",
+      "connect",
+      "connection",
+      "reset",
+      "troubleshoot"
+    ],
+    "text": "Synthetic guide IT-001: For VPN connection issues, restart the approved VPN client and verify internet access. If it still fails, create an IT support ticket. Never share your password."
+  },
+  {
+    "id": "ACCESS-001",
+    "groups": [
+      "employees"
+    ],
+    "keywords": [
+      "software",
+      "access",
+      "request",
+      "license"
+    ],
+    "text": "Synthetic policy ACCESS-001: Software access requires a manager-approved request and a license availability check."
+  },
+  {
+    "id": "HR-PRIVATE",
+    "groups": [
+      "hr-admin"
+    ],
+    "keywords": [
+      "salary",
+      "compensation",
+      "executive",
+      "policy"
+    ],
+    "text": "Synthetic restricted document: Executive compensation review is restricted to the HR administration group."
+  }
+]
